@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, Scale } from "lucide-react";
+import { Menu, X, Scale, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/lib/auth-context";
 
 const navLinks = [
   { to: "/courses", label: "Courses" },
@@ -12,6 +13,7 @@ const navLinks = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { user, signOut } = useAuth();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -50,12 +52,23 @@ export function Header() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button asChild variant="ghost" size="sm">
-            <Link to="/login">Login</Link>
-          </Button>
-          <Button asChild size="sm" className="bg-[var(--gradient-gold)] text-gold-foreground hover:opacity-90 shadow-glow">
-            <Link to="/signup">Sign up</Link>
-          </Button>
+          {user ? (
+            <>
+              <span className="text-xs text-muted-foreground max-w-[160px] truncate">{user.email}</span>
+              <Button onClick={() => signOut()} variant="ghost" size="sm">
+                <LogOut className="size-4 mr-1.5" /> Sign out
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button asChild variant="ghost" size="sm">
+                <Link to="/login">Login</Link>
+              </Button>
+              <Button asChild size="sm" className="bg-[var(--gradient-gold)] text-gold-foreground hover:opacity-90 shadow-glow">
+                <Link to="/signup">Sign up</Link>
+              </Button>
+            </>
+          )}
         </div>
 
         <button
