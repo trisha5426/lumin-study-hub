@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
+import { attachAuthHeader } from "@/lib/auth-client-middleware";
 import { courses } from "@/data/courses";
 
 export const createRazorpayOrder = createServerFn({ method: "POST" })
