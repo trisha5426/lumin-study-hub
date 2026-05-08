@@ -56,7 +56,7 @@ function CoursesPage() {
               <div className="absolute top-3 left-3 px-2 py-1 rounded-md glass-strong text-[10px] tracking-widest uppercase">
                 {c.code} · Sem {c.semester}
               </div>
-              <div className="absolute bottom-3 right-3 size-12 rounded-full bg-[var(--gradient-gold)] text-gold-foreground grid place-items-center opacity-0 group-hover:opacity-100 transition-smooth">
+              <div className="absolute bottom-3 right-3 size-12 rounded-full bg-gradient-brand text-primary-foreground grid place-items-center opacity-0 group-hover:opacity-100 transition-smooth">
                 <PlayCircle className="size-5" />
               </div>
             </div>
@@ -66,7 +66,7 @@ function CoursesPage() {
               <p className="mt-3 text-sm text-muted-foreground line-clamp-2">{c.description}</p>
               <div className="mt-5 flex items-center justify-between">
                 <span className="text-xs text-muted-foreground">{c.hours}h · {c.lessons} lessons</span>
-                <span className="font-display text-xl text-gradient-gold">₹{c.price}</span>
+                <span className="font-display text-xl text-gradient-brand">₹{c.price}</span>
               </div>
             </div>
           </Link>

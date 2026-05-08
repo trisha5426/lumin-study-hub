@@ -18,9 +18,9 @@ function NotFoundComponent() {
   return (
     <div className="min-h-screen grid place-items-center bg-hero px-4">
       <div className="text-center glass rounded-3xl p-10 max-w-md">
-        <h1 className="font-display text-7xl text-gradient-gold">404</h1>
+        <h1 className="font-display text-7xl text-gradient-brand">404</h1>
         <p className="mt-3 text-muted-foreground">This page seems to be off the syllabus.</p>
-        <Link to="/" className="mt-6 inline-block px-5 py-2.5 rounded-lg bg-[var(--gradient-gold)] text-gold-foreground text-sm font-medium">
+        <Link to="/" className="mt-6 inline-block px-5 py-2.5 rounded-lg bg-gradient-brand text-primary-foreground text-sm font-medium">
           Back to home
         </Link>
       </div>
@@ -38,7 +38,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <p className="mt-2 text-sm text-muted-foreground">{error.message}</p>
         <button
           onClick={() => { router.invalidate(); reset(); }}
-          className="mt-6 px-5 py-2.5 rounded-lg bg-[var(--gradient-gold)] text-gold-foreground text-sm font-medium"
+          className="mt-6 px-5 py-2.5 rounded-lg bg-gradient-brand text-primary-foreground text-sm font-medium"
         >
           Try again
         </button>
