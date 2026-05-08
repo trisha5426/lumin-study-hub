@@ -24,7 +24,7 @@ function AboutPage() {
       <div className="max-w-3xl">
         <p className="text-xs uppercase tracking-[0.25em] text-primary">About Lumin</p>
         <h1 className="mt-3 font-display text-5xl md:text-7xl leading-[1.05]">
-          Light, brought to <span className="text-gradient-gold italic">the law.</span>
+          Light, brought to <span className="text-gradient-brand italic">the law.</span>
         </h1>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
           Lumin is a learning studio for the next generation of Indian lawyers. We started in

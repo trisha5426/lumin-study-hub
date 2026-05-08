@@ -88,7 +88,7 @@ function CourseDetail() {
                 onClick={handlePlay}
                 className="absolute inset-0 grid place-items-center group"
               >
-                <span className="size-20 rounded-full bg-[var(--gradient-gold)] text-gold-foreground grid place-items-center shadow-glow group-hover:scale-110 transition-smooth">
+                <span className="size-20 rounded-full bg-gradient-brand text-primary-foreground grid place-items-center shadow-glow group-hover:scale-110 transition-smooth">
                   <PlayCircle className="size-10" />
                 </span>
               </button>
@@ -97,7 +97,7 @@ function CourseDetail() {
             {locked && (
               <div className="absolute inset-0 grid place-items-center p-6">
                 <div className="glass-strong rounded-2xl p-8 max-w-sm text-center shadow-elegant">
-                  <div className="size-14 mx-auto rounded-full bg-[var(--gradient-gold)] text-gold-foreground grid place-items-center">
+                  <div className="size-14 mx-auto rounded-full bg-gradient-brand text-primary-foreground grid place-items-center">
                     <Lock className="size-6" />
                   </div>
                   <h3 className="mt-4 font-display text-2xl">Free views exhausted</h3>
@@ -106,7 +106,7 @@ function CourseDetail() {
                   </p>
                   <Button
                     onClick={handlePurchase}
-                    className="mt-5 w-full bg-[var(--gradient-gold)] text-gold-foreground hover:opacity-90 shadow-glow"
+                    className="mt-5 w-full bg-gradient-brand text-primary-foreground hover:opacity-90 shadow-glow"
                   >
                     Buy Now — ₹{course.price}
                   </Button>
@@ -159,13 +159,13 @@ function CourseDetail() {
               <PlayCircle className="size-12 text-foreground/70" />
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="font-display text-4xl text-gradient-gold">₹{course.price}</span>
+              <span className="font-display text-4xl text-gradient-brand">₹{course.price}</span>
               <span className="text-sm text-muted-foreground line-through">₹{course.price + 500}</span>
             </div>
             {purchased ? (
               <Button disabled className="mt-5 w-full">Owned ✓</Button>
             ) : (
-              <Button onClick={handlePurchase} className="mt-5 w-full bg-[var(--gradient-gold)] text-gold-foreground hover:opacity-90 shadow-glow">
+              <Button onClick={handlePurchase} className="mt-5 w-full bg-gradient-brand text-primary-foreground hover:opacity-90 shadow-glow">
                 Buy now
               </Button>
             )}

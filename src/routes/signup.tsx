@@ -15,7 +15,7 @@ function SignupPage() {
     <div className="container mx-auto px-4 py-20 md:py-28 grid place-items-center">
       <div className="w-full max-w-md glass rounded-3xl p-8 md:p-10 shadow-elegant">
         <div className="text-center">
-          <span className="inline-grid place-items-center size-12 rounded-xl bg-[var(--gradient-gold)] text-gold-foreground shadow-glow">
+          <span className="inline-grid place-items-center size-12 rounded-xl bg-gradient-brand text-primary-foreground shadow-glow">
             <Scale className="size-5" />
           </span>
           <h1 className="mt-4 font-display text-3xl">Join Lumin</h1>
@@ -40,7 +40,7 @@ function SignupPage() {
             <Label htmlFor="password">Password</Label>
             <Input id="password" type="password" required className="mt-1.5 h-11 bg-background/40" />
           </div>
-          <Button className="w-full bg-[var(--gradient-gold)] text-gold-foreground hover:opacity-90 shadow-glow h-11">
+          <Button className="w-full bg-gradient-brand text-primary-foreground hover:opacity-90 shadow-glow h-11">
             Create account
           </Button>
         </form>

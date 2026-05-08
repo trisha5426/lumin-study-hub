@@ -74,7 +74,7 @@ function ContactPage() {
             <Label htmlFor="message">Message</Label>
             <Textarea id="message" required rows={6} className="mt-1.5 bg-background/40" />
           </div>
-          <Button disabled={sending} className="bg-[var(--gradient-gold)] text-gold-foreground hover:opacity-90 shadow-glow">
+          <Button disabled={sending} className="bg-gradient-brand text-primary-foreground hover:opacity-90 shadow-glow">
             {sending ? "Sending..." : "Send message"}
           </Button>
         </form>
